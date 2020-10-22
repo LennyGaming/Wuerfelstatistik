@@ -94,17 +94,30 @@
             margin-left: 5px;
         }
 
-        #seed{
+        #seed {
             margin-left: 8px;
             transform: scale(1.5)
         }
 
-        #box{
+        #box {
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 23em;
             margin-top: 0.5em;
+        }
+
+        #nobar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 18.1em;
+            margin-top: 0.5em;
+        }
+
+        #instant {
+            margin-left: 8px;
+            transform: scale(1.5)
         }
     </style>
 </head>
@@ -127,8 +140,12 @@
         <div id="myBar"></div>
     </div>
     <div id="box">
-        <input type="checkbox" id="seed" >
+        <input type="checkbox" id="seed">
         <label for="seed">Turbo Boost</label>
+    </div>
+    <div id="nobar">
+        <input type="checkbox" id="instant" onclick="noloading()">
+        <label for="instant">Toggle Loading-Bar</label>
     </div>
     <!-- <progress value="g" max="100" id='pog'></progress> -->
 </body>
