@@ -6,13 +6,22 @@ window.onload = function start() {
   document.getElementById("5").innerHTML = 'Fünfer: ';
   document.getElementById("6").innerHTML = 'Sechser: ';
 }
+
 var i = 0;
 function move() {
   if (i == 0) {
     i = 1;
+    var e = document.getElementById("num").value;
+    var checkBox = document.getElementById("seed");
+    if (checkBox.checked == true) {
+      speed = 1;
+    }
+    else {
+      speed = e / 1000;
+    }
     var elem = document.getElementById("myBar");
     var width = 0;
-    var id = setInterval(frame, 1);
+    var id = setInterval(frame, speed);
     function frame() {
       if (width >= 100) {
         clearInterval(id);
@@ -71,6 +80,8 @@ function move() {
     }
   }
 }
+
+
 /* function wurf(){
 let eins = 0;
 let zwei = 0;

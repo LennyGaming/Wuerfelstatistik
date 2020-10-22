@@ -87,6 +87,25 @@
             line-height: 30px;
             color: rgb(90, 66, 59);
         }
+
+        label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            margin-left: 5px;
+        }
+
+        #seed{
+            margin-left: 8px;
+            transform: scale(1.5)
+        }
+
+        #box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 23em;
+            margin-top: 0.5em;
+        }
     </style>
 </head>
 
@@ -106,6 +125,10 @@
     </div>
     <div id="myProgress">
         <div id="myBar"></div>
+    </div>
+    <div id="box">
+        <input type="checkbox" id="seed" >
+        <label for="seed">Turbo Boost</label>
     </div>
     <!-- <progress value="g" max="100" id='pog'></progress> -->
 </body>
