@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Würfel Statistik</title>
+    <script src="wuerfel.js">;</script>
+    <style>
+        h1 {
+            background-color: cornsilk;
+            max-width: 8.04em;
+            margin: auto;
+            font-size: 4em;
+            text-align: center;
+            box-shadow: 5px 6px rgb(187, 132, 116);
+        }
+
+        h1,
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: blanchedalmond;
+        }
+
+        #asd {
+            background-color: cornsilk;
+            max-width: 14.3em;
+            margin: auto;
+            padding-left: 0.6em;
+            padding-right: 1.2em;
+            padding-bottom: 1px;
+            padding-top: 1px;
+            font-size: 2em;
+            box-shadow: 5px 2px rgb(187, 132, 116);
+        }
+
+        #bub {
+            /* position: absolute; */
+            display: flex;
+            /* left: 16%; */
+            align-items: center;
+            justify-content: center;
+        }
+
+        #num {
+            border: 3px double dimgray;
+            box-shadow: 3px 2px rgb(187, 132, 116);
+            font-size: 2em;
+            padding: 0.1em;
+            border-left: none;
+            background-color: white;
+        }
+
+        #dada {
+            padding: 0.1em;
+            border: 3px double dimgray;
+            box-shadow: 3px 2px rgb(187, 132, 116);
+            border-right: none;
+            background-color: white;
+        }
+
+        #pog {
+            margin-top: 5em;
+            margin-left: 8em;
+            font-size: xx-large;
+        }
+
+        #myProgress {
+            display: block;
+            width: 517px;
+            background-color: #ddd;
+            align-items: center;
+            margin: auto;
+            margin-top: 10px;
+            box-shadow: 4px 3px rgb(187, 132, 116);
+        }
+
+        #myBar {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            width: 0px;
+            height: 35px;
+            background-color: #4CAF50;
+            line-height: 30px;
+            color: rgb(90, 66, 59);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Würfelstatistik</h1>
+    <div id="asd">
+        <p id="1"></p>
+        <p id="2"></p>
+        <p id="3"></p>
+        <p id="4"></p>
+        <p id="5"></p>
+        <p id="6"></p>
+    </div>
+    <div id="bub">
+        <button onclick="move()" id="dada" style="font-size: xx-large;">Würfeln</button>
+        <input type="number" name="e" id="num" autofocus placeholder="Anzahl der Würfe:">
+    </div>
+    <div id="myProgress">
+        <div id="myBar"></div>
+    </div>
+    <!-- <progress value="g" max="100" id='pog'></progress> -->
+</body>
+
+</html>
