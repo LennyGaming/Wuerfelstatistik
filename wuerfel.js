@@ -6,7 +6,19 @@ window.onload = function start() {
   document.getElementById("5").innerHTML = 'Fünfer: ';
   document.getElementById("6").innerHTML = 'Sechser: ';
 }
-
+var turbo = 0.5;
+function noloading() {
+  var checkBox = document.getElementById("instant");
+  var nomore = document.getElementById("myProgress");
+  if (checkBox.checked == true) {
+    nomore.style.display = "none";
+    turbo = 100;
+  }
+  else{
+    nomore.style.display = "block";
+    turbo = 0.5;
+  }
+}
 var i = 0;
 function move() {
   if (i == 0) {
@@ -27,11 +39,11 @@ function move() {
         clearInterval(id);
         i = 0;
       } else {
-        width += 0.5;
+        width += turbo;
         elem.style.width = width + "%";
         elem.innerHTML = `Loading...${width}%`;
       }
-      if (width == 100) {
+      if (width >= 100) {
         let eins = 0;
         let zwei = 0;
         let drei = 0;
